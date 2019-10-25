@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8" />
-  <title>Foobar Fly</title>
+  <title>Foo Fly</title>
 
   <!-- <base href="/" /> -->
   <script>document.write("<base href='"+location.pathname+"' />");</script>
@@ -15,6 +15,12 @@
   <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <meta name="format-detection" content="telephone=no" />
   <meta name="msapplication-tap-highlight" content="no" />
+
+  <!-- <meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'"> -->
+  <!-- <meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' http://* 'unsafe-inline'; script-src 'self' http://* 'unsafe-inline' 'unsafe-eval' 'script-src-elem' " /> -->
+  <meta http-equiv="Content-Security-Policy" content="default-src *; child-src * 'self' blob: http:;
+  img-src * 'self' data: http:; script-src 'self' 'unsafe-inline' 'unsafe-eval' *;
+  style-src 'self' 'unsafe-inline' *; connect-src *;">
 
   <link rel="icon" type="image/png" href="assets/icons/favicon.png" />
   <link rel="apple-touch-icon" sizes="76x76" href="assets/icons/apple-touch-icon.png" />
@@ -37,6 +43,6 @@
 <body>
   <app-root></app-root>
   <!-- <script src="pwa.js" defer></script> -->
-<script src="runtime-es2015.825814420b71e4f2f41b.js" type="module"></script><script src="polyfills-es2015.cd1cd19bc2d392519ace.js" type="module"></script><script src="runtime-es5.25d15acb0db214fcb861.js" nomodule></script><script src="polyfills-es5.cb4c97a376aa42d2b903.js" nomodule></script><script src="main-es2015.cad4c008c026156fc260.js" type="module"></script><script src="main-es5.6bfb645705b3e80adb0f.js" nomodule></script></body>
+<script src="runtime-es2015.acd3e4d72bb90664f5bc.js" type="module"></script><script src="polyfills-es2015.cd1cd19bc2d392519ace.js" type="module"></script><script src="runtime-es5.832db8b9c685fc132907.js" nomodule></script><script src="polyfills-es5.cb4c97a376aa42d2b903.js" nomodule></script><script src="main-es2015.199405ac76249c5973ff.js" type="module"></script><script src="main-es5.11a147ffc1ec04461c53.js" nomodule></script></body>
 
 </html>
