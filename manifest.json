@@ -1,7 +1,7 @@
 ﻿{
   "scope": "/",
-  "name": "Foo Fly",
-  "short_name": "Foo Fly",
+  "name": "Foofly",
+  "short_name": "Foofly",
   "start_url": "/",
   "display": "standalone",
   "description": "Foobar2000 Remote Control",

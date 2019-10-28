@@ -34,7 +34,7 @@
         "header": "设置",
         "header1": "连接设置：",
         "header2": "语言设置：",
-        "lbl-url": "Foo Fly",
+        "lbl-url": "Foofly",
         "language": "语言(Language)",
         "animation": "专辑封面动画",
         "autoDJ": "自动DJ",
@@ -87,7 +87,7 @@
         "save": "保存"
     },
     "login": {
-        "header": "Foo Fly",
+        "header": "Foofly",
         "button-text": "登录",
         "password-placeholder":""
     },

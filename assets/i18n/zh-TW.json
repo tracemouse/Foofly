@@ -35,7 +35,7 @@
         "header": "設置",
         "header1": "連接設置：",
         "header2": "語言設置：",
-        "lbl-url": "Foo Fly",
+        "lbl-url": "Foofly",
         "language": "語言(Language)",
         "animation": "專輯封面動畫",
         "autoDJ": "自動DJ",
@@ -88,7 +88,7 @@
         "save": "保存"
     },
     "login": {
-        "header": "Foo Fly",
+        "header": "Foofly",
         "button-text": "登錄",
         "password-placeholder":"如未設置密碼請留空"
     },
