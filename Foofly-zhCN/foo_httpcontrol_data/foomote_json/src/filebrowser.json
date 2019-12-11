@@ -1,0 +1,5 @@
+{
+	"parent": "[PATH_PARENT]",
+	"path": [PATH_JS],
+	"browser": [BROWSER_JS]
+}

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>foobar2000</title>
+		<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+		<script type="text/javascript" src="js/jquery-ui-1.10.4.custom.min.js"></script>
+	        <script type="text/javascript" src="js/ajquery.js"></script>
+		<link type="text/css" href="css/smoothness/jquery-ui-1.10.4.custom.css" rel="stylesheet" />
+		<link rel="shortcut Icon" href="/ajquery/img/favicon.ico" type="image/x-icon" />
+		<style type="text/css">
+			body{ font-size: 0.5em; margin: 10px; background-color: #ffffff; max-width: 600px;}
+			ul#buttons {margin: 0; padding: 0;}
+			ul#buttons li {margin: 3px; position: relative; padding: 4px 0; cursor: pointer; float: left;  list-style: none;}
+			ul#buttons span.ui-icon {float: left; margin: 0 4px;}
+			button { margin: .5em .4em .5em 0; cursor: pointer; padding: .2em .6em .3em .6em; line-height: 1.4em; }
+			.lindicator { padding: 8px; visibility: hidden; }
+
+			.ui-progressbar .ui-progressbar-value { background: #e8e8e8; }
+
+			#pl { display: table; width: 100%; }
+			.pl_row { display: table-row; cursor: default; height: 18px;}
+			.pl_c1  { width: 15%; display: table-cell; padding: 2px; text-align: right; vertical-align: middle; }
+			.pl_c2  { width: 80%; display: table-cell; padding: 2px; vertical-align: middle; }
+			.pl_c3  { width: 5%; display: table-cell; padding: 2px; text-align: right; vertical-align: middle; }
+			.pl_even{ background: #f8f8f8; }
+			.pl_prev{ color:DarkGray; }
+			.pl_selected { background: #daeaff; border: 1px solid white; }
+			.bbl { border-left: 1px solid gray; } /* border black left */
+			.bbm { border-top: 1px solid gray; border-bottom: 1px solid gray; } /* border black top and bottom */
+			.bbr { border-right: 1px solid gray; } /* border black right */
+			.bwl { border-left: 1px solid white; } /* border white left */
+			.bwm { border-top: 1px solid white; border-bottom: 1px solid white; } /* border white top and bottom */
+			.bwr { border-right: 1px solid white; } /* border white right */
+			.bbt { border-bottom: 1px solid white; border-top: 1px solid gray; } /* border black top */
+			.pl-album { color: gray;}
+
+			#playlist { margin-right: -10px; margin-left: -10px; }
+
+			.br_o { background:#f8f8f8; }	/* odd file browser row */
+			.br_g { color:#a5a5a5; }	/* inactive file browser row */
+
+			hr { border: 0; border-bottom: 1px #b0b0b0 solid; }
+			#progressbar { cursor: pointer; margin-bottom: 12px; }
+			#playingtitle { float: left; font-size: 1em; padding: 0.25em; }
+			#playingtime { float: right; font-size: 1em; padding: 0.25em; } 
+			#browse_table { width: 100%; /*height: 85%;*/ overflow-y: hidden; overflow-x:hidden; }
+			#aa_pane { opacity: .95; width: 233px; display: none; z-index: 2; cursor: move; margin: 0px;}
+
+			#querylist { height: 300px; overflow: visible;}
+			#querylist #qr { cursor: pointer; }
+			.qr_selected { background: #daeaff; }
+
+			#tooltip { background: #ededed; padding: 2px; border: 1px solid gray; display: none; z-index: 1000; }
+
+			.dragplacer-top div { border-top: 1px double red;}
+			.dragplacer-bottom div { border-bottom: 1px double red;}
+		</style>	
+	</head>
+	<body>
+	<div id="wnd">
+		<ul id="buttons" class="ui-widget ui-helper-clearfix" style="float: left;">
+		<li class="btncmd ui-state-default ui-corner-all" style="margin-left: 0px;" title="停止" id="Stop"><span class="ui-icon ui-icon-stop"></span></li>
+		<li class="btncmd ui-state-default ui-corner-all" title="开始播放" id="Start"><span class="ui-icon ui-icon-play"></span></li>
+		<li class="btncmd ui-state-default ui-corner-all" title="播放或暂停 (空格键)" id="PlayOrPause"><span class="ui-icon ui-icon-pause"></span></li>
+		<li class="btncmd ui-state-default ui-corner-all" title="上一首" id="StartPrevious"><span class="ui-icon ui-icon-seek-first"></span></li>
+		<li class="btncmd ui-state-default ui-corner-all" title="下一首" id="StartNext"><span class="ui-icon ui-icon-seek-end"></span></li>
+		<li class="btncmd ui-state-default ui-corner-all" title="随机" id="StartRandom"><span class="ui-icon ui-icon-help"></span></li>
+		<li class=""></li>
+		<li class="ui-state-default ui-corner-all" title="浏览文件" id="browse_btn"><span class="ui-icon ui-icon-folder-open"></span></li>
+		<li class="ui-state-default ui-corner-all" title="搜索媒体库" id="search_btn"><span class="ui-icon ui-icon-search"></span></li>
+		<li class="ui-state-default ui-corner-all" title="专辑封面" id="aa_btn"><span class="ui-icon ui-icon-image"></span></li>
+		<li class="ui-state-default ui-corner-all" title="扩展控制" id="pbs_btn"><span class="ui-icon ui-icon-gear"></span></li>
+		<li class="ui-state-default ui-corner-all" id="mute"><span class="ui-icon ui-icon-volume-off"></span></li>
+		<li id="vol"><!--<span>--><div id="volume" style="width: 150px; margin: 0.5em"></div><!--</span>--></li>
+		</ul>
+		<div id="loading" class="lindicator">&nbsp;&nbsp;<img src="img/loading.gif"></div>
+		<p><div id="progressbar"><div id="playingtitle"></div><div id="playingtime"></div></div>
+
+		<div id="tabs" class="ui-tabs ui-helper-clearfix">
+			<ul>
+				<li><a href="#t"></a></li>
+			</ul>
+			<div id="t">
+				<div>
+					<div style="float: right; width: 8em;">
+						<ul id="buttons" class="ui-widget" style="margin-top: -1.3em; ">
+							<li style="border: 1px solid transparent;" title="" id="prevpage_btn"><span class="ui-icon ui-icon-arrowthick-1-w"></span></li>
+							<li style="border: 1px solid transparent;" title="" id="nextpage_btn"><span class="ui-icon ui-icon-arrowthick-1-e"></span></li>
+						</ul>
+					</div>
+					<div style="margin-top:0.5em; margin-right: 11em"><div id="pageslider"></div></div>
+				</div>
+
+				<div id="playlist" style="clear: both;">lol</div>
+				<hr style="margin-right: -1.5em; margin-left: -1.5em;">
+				<div id="summary" style="margin-bottom: -0.5em"></div>
+  	        	</div>
+		</div>
+	</div>
+		<div id="pbs_dlg" title="扩展控制">
+			<p>播放列表:</p>
+			<ul id="buttons" class="ui-widget ui-helper-clearfix">
+			<li class="ui-state-default ui-corner-all" title="添加" id="CreatePlaylist"><span class="ui-icon ui-icon-plusthick"></span></li>
+			<li class="ui-state-default ui-corner-all" title="移除" id="RemovePlaylist"><span class="ui-icon ui-icon-closethick"></span></li>
+			<li class="ui-state-default ui-corner-all" title="重命令" id="RenamePlaylist"><span class="ui-icon ui-icon-pencil"></span></li>
+			<li class="ui-state-default ui-corner-all" title="清空" id="EmptyPlaylist"><span class="ui-icon ui-icon-clipboard"></span></li>
+			<li class="ui-state-default ui-corner-all" title="撤消 (u)" id="Undo"><span class="ui-icon ui-icon-arrowreturnthick-1-w"></span></li>
+			<li class="ui-state-default ui-corner-all" title="重做 (r)" id="Redo"><span class="ui-icon ui-icon-arrowreturnthick-1-e"></span></li>
+			<li class="ui-state-default ui-corner-all" title="刷新" id="RefreshPlaylist"><span class="ui-icon ui-icon-refresh"></span></li>
+			<li class="ui-state-default ui-corner-all" title="焦点移至正在播放" id="FocusOnPlaying"><span class="ui-icon ui-icon-lightbulb"></span></li>
+			</ul>
+			<hr/>
+			<p>播放列表项目:</p>
+			<ul id="buttons" class="ui-widget ui-helper-clearfix">
+			<li class="ui-state-default ui-corner-all" title="入列选定项目 (q)" id="QueueItems"><span class="ui-icon ui-icon-circle-plus"></span></li>
+			<li class="ui-state-default ui-corner-all" title="出列选定项目 (w)" id="DequeueItems"><span class="ui-icon ui-icon-circle-minus"></span></li>
+			<li class="ui-state-default ui-corner-all" title="播放队列随机项目" id="QueueRandomItems"><span class="ui-icon ui-icon-help"></span></li>
+			<li class="ui-state-default ui-corner-all" title="刷新播放队列" id="FlushQueue"><span class="ui-icon ui-icon-trash"></span></li>
+			<li class="ui-state-default ui-corner-all" title="删除 (Del)" id="Del"><span class="ui-icon ui-icon-minusthick"></span></li>
+			<li class="ui-state-default ui-corner-all" title="设置光标" id="SetFocus"><span class="ui-icon ui-icon-pin-s"></span></li>
+			</ul>
+			<hr/>
+			<p>播放次序&nbsp;<select id="PBO"><option value="0">默认</option><option value="1">重复 (播放列表)</option><option value="2">重复 (音轨)</option><option value="3">随机</option><option value="4">乱序 (音轨)</option><option value="5">乱序 (专辑)</option><option value="6">乱序 (目录)</option></select></p>
+			<p><input type="checkbox" id="SAC">当前播放结束后停止</p>
+			<p><input type="checkbox" id="SAQ">播放队列结束后停止</p>
+		</div>
+
+		<div id="aa_pane">
+			<img id="aa_img" style="width: 100%;">
+		</div>
+
+		<div id="search_dlg" title="搜索媒体库">
+			<div id="querylist"></div>
+		</div>
+
+		<div id="search_dlg_nav1" class="ui-dialog-buttonpane ui-widget-content ui-helper-clearfix" style="border-bottom-width: 1px; border-top-width: 0px; font-size: 1em; width: 100%; white-space:nowrap;">
+			<p>搜索: <input type="text" size="30" id="searchstr"> <a style="padding-right: 5px;" href="http://wiki.hydrogenaudio.org/index.php?title=Foobar2000:Query_syntax" title="查询语法帮助">?</a></p>
+		</div>
+
+		<div id="search_dlg_nav2" class="ui-dialog-buttonpane ui-widget-content ui-helper-clearfix" style="border-bottom-width: 1px; border-top-width: 0px; font-size: 1em; width: 100%; white-space:nowrap;">
+			<button id="r_btn">查询</button>&nbsp;<span id="querypath"></span>
+		</div>
+
+		<div id="browse_dlg" title="文件浏览器">
+			<div id="browse_table"></div>
+		</div>
+
+		<div id="browse_dlg_nav" class="ui-dialog-buttonpane ui-widget-content ui-helper-clearfix" style="border-bottom-width: 1px; border-top-width: 0px; font-size: 1em; width: 100%; white-space:nowrap;">
+			<a id="browse_parent" href="#"></a>&nbsp;<span id="browse_path"></span>
+		</div>
+
+		<div id="error_dlg" title="&#9760; 哎哟!">
+			<p>AJAX 出错.</p>
+			<p>可能的原因:</p>
+			<ul>
+				<li>JSON 解析器就死在无效的数据; 响应转储可能会被下面所提供, 因此您可以分析什么地方错误使用了你所选择的 JSON 验证, 例如: <a href="http://jsonformatter.curiousconcept.com/">http://jsonformatter.curiousconcept.com/</a>;</li>
+				<li>连接中断;</li>
+				<li>天知道还有什么.</li>
+			</ul>
+			<p><a href="/ajquery/index.html">重启</a> 模板或想起别的事情.</p>
+			<hr/>
+			<textarea id="dbg" cols="90" rows="30"></textarea>
+		</div>
+
+		<span id="tooltip" class="ui-widget"></span>
+	</body>
+</html>

@@ -1,0 +1,13 @@
+{
+	"playlist":
+	{
+		"page": "[PLAYLIST_PAGE]",
+		"totalPages": "[PLAYLIST_PAGES_COUNT]",
+		"itemsPerPage": "[PLAYLIST_ITEMS_PER_PAGE]",
+		"totalItems": "[PLAYLIST_ITEMS_COUNT]",
+		"active": "[PLAYLIST_ACTIVE]",
+		"playing": "[PLAYLIST_PLAYING]",
+		"playingItem": "[PLAYLIST_ITEM_PLAYING]",
+		"items": [PLAYLIST_JS]
+	}
+}
