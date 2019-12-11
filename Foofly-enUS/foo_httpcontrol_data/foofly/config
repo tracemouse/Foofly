@@ -1,0 +1,10 @@
+[foo_httpcontrol]
+url=/index.html
+playlist_row={"albumArtist": "$replace(%album artist%,\,\\,",\")","artist": "$replace(%artist%,\,\\,",\")", "album": "$replace(%album%,\,\\,",\")", "number": "$ifgreater(%totaldiscs%,1, D%discnumber%.,)%tracknumber%", "track": "$replace(%title%,\,\\,",\")", "len": "%length%","codec":"%codec%","bitRate":"%bitrate%kbps","sampleRate":"%samplerate%Hz","chanel":"%channels%","fileUrl":"$replace(%path%,\,\\,",\")" }
+helper1="playing": {"albumArtist": "$replace(%album artist%,\,\\,",\")", "artist": "$replace(%artist%,\,\\,",\")", "album": "$replace(%album%,\,\\,",\")", "number": "%tracknumber%", "track": "$replace(%title%,\,\\,",\")", "len": "%length%","codec":"%codec%","bitRate":"%bitrate%kbps","sampleRate":"%samplerate%Hz","chanel":"%channels%","fileUrl":"$replace(%path%,\,\\,",\")"},
+helper2=
+helper3=
+albumart=$directory_path(%path%)\folder.jpg|$directory_path(%path%)\*.jpg
+albumart_not_found=foofly/assets/img/nocover.png
+albumart_not_available=foofly/assets/img/nocover.png
+playlist_items_per_page=30
