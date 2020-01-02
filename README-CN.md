@@ -50,10 +50,10 @@ http://ip:port/  |  在Foofly-proxy设置窗口可以看见这个url, 只有当F
 
 3) 上面第二步完成之后在主屏幕上就可以看见Foofly图标，点击打开它，没错，看起来和一个普通的iPhone Native App一模一样，enjoy it
 
-![iphone-1](https://tracemouse.github.io/Foobar2000Fly/docs/iphone-1.png)
-![iphone-2](https://tracemouse.github.io/Foobar2000Fly/docs/iphone-2.png)
-![iphone-3](https://tracemouse.github.io/Foobar2000Fly/docs/iphone-3.png)
-![iphone-4](https://tracemouse.github.io/Foobar2000Fly/docs/iphone-4.png)
+![iphone-1](https://tracemouse.github.io/Foofly/assets/img/iphone-1.jpg)
+![iphone-2](https://tracemouse.github.io/Foofly/assets/img/iphone-2.jpg)
+![iphone-3](https://tracemouse.github.io/Foofly/assets/img/iphone-3.jpg)
+![iphone-4](https://tracemouse.github.io/Foofly/assets/img/iphone-4.jpg)
 
 #### Android WebApp ####
 
