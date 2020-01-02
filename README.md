@@ -32,10 +32,10 @@ Get the latest plugin from the [release](https://github.com/tracemouse/Foofly/re
 unzip the zip file and copy the file & folders into the folder of `Foobar2000`.
 Please remember to close the Foobar2000 main program, the plugin will be effective when you re-open the Foobar2000 program. 
 
-![plugin-1](https://tracemouse.github.io/Foofly/docs/plugin-1.png)
-
+I don't know how to use C++ to write a native foobar2000 plugin, so I used C# to write a program named Foofly-proxy(`Foofly-proxy.exe`) to call the httpcontorl plugin of foobar2000.
 Now you run the program Foofly-proxy(`Foofly-proxy.exe`), and you can double click the notifyicon to open the main window. 
 
+![plugin-1](https://tracemouse.github.io/Foofly/docs/plugin-1.png)
 
 ### App Installation ###
 
@@ -70,8 +70,6 @@ Use Google Chrome to do it like iPhone Safari above, Chrome may remind you the H
 ## Usage ##
 
 ### Plugin Usage ###
-
-I don't know how to use C++ to write a native foobar2000 plugin, so I used C# to write a program named Foofly-proxy(`Foofly-proxy.exe`) to call the httpcontorl plugin of foobar2000.
 
 It's enough to run the program Foofly-proxy, and it will auto open the foolbar2000 main program when app connection starts.
 If you don't know how to config the settings of Foofly-proxy & httpcontrol, just keep it as default.
