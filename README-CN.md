@@ -33,6 +33,8 @@ Foofly 分为plugin和App两部分，plugin采用C#编写，App采用ionic4 + An
 由于作者对C++不太熟悉，而foobar2000的原生插件必须使用C++编写，所以只好采用了比较笨的办法，就是用C#写了一个程序叫 foofly-proxy.exe，你只需要双击运行这个程序就行了，这个程序会通过foobar2000的foo_httpcontrol插件来控制foobar2000.  foofly-proxy.exe运行时是默认最小化到任务栏的，你可以通过双击任务栏的图标打开设置窗口，你可以保持foofly-proxy.exe一直开着，当手机端连接时foofly-proxy会自动打开foobar2000主程序。
 
 ![plugin-install-1](https://tracemouse.github.io/Foofly/assets/img/plugin-install.jpg)
+![plugin-1](https://tracemouse.github.io/Foofly/assets/img/foo_httpcontrol.jpg)
+![plugin-2](https://tracemouse.github.io/Foofly/assets/img/foofly-proxy.jpg)
 
 ### App 安装方法 ###
 
@@ -69,9 +71,6 @@ http://ip:port/  |  在Foofly-proxy设置窗口可以看见这个url, 只有当F
 foo_httpcontrol的设置在foobar2000的设置面板中，建议保留默认设置不要改动。
 
 Foofly-proxy的设置可以通过双击任务栏图标打开设置窗口，建议都按照默认设置就行了，需要做什么改动。
-
-![plugin-1](https://tracemouse.github.io/Foofly/assets/img/foo_httpcontrol.jpg)
-![plugin-2](https://tracemouse.github.io/Foofly/assets/img/foofly-proxy.jpg)
 
 如果你的电脑网卡设置的是DHCP自动获取IP地址，IP地址可能会不固定，这样会造成你使用Foofly App时可能经常需要输入新的IP地址，所以最好把网卡设置为固定IP。设置固定IP有两个方法：  
 a) 直接在网卡属性里面把IPV4的地址固定（设置之前先查看DHCP SERVER给你分配的参数，完全设置成一样的就行了)   

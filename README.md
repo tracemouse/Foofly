@@ -36,6 +36,8 @@ I don't know how to use C++ to write a native foobar2000 plugin, so I used C# to
 Now you run the program Foofly-proxy(`Foofly-proxy.exe`), and you can double click the notifyicon to open the main window. 
 
 ![plugin-install-1](https://tracemouse.github.io/Foofly/assets/img/plugin-install.jpg)
+![plugin-1](https://tracemouse.github.io/Foofly/assets/img/foo_httpcontrol.jpg)
+![plugin-2](https://tracemouse.github.io/Foofly/assets/img/foofly-proxy.jpg)
 
 ### App Installation ###
 
@@ -73,8 +75,6 @@ If you don't know how to config the settings of Foofly-proxy & httpcontrol, just
 
 The httpcontrol configration file is located at "configuration\foo_httpcontrol.dll.cfg", delete it and re-open the foobar2000 program, the httpcontorl setting will be fallback as default.
 
-![plugin-1](https://tracemouse.github.io/Foofly/assets/img/foo_httpcontrol.jpg)
-![plugin-2](https://tracemouse.github.io/Foofly/assets/img/foofly-proxy.jpg)
 
 ### App Usage ###
 
