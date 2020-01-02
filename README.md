@@ -1,6 +1,6 @@
 ## Foofly ##
 
-English | [**中文版**](README-CN.md)
+English | [中文版](README-CN.md)
 
 Foofly is a Foobar2000 plugin to enable remote controling of [**Foobar2000**](http://www.foobar2000.org/) by your mobile phone.
 
