@@ -35,8 +35,7 @@ Please remember to close the Foobar2000 main program, the plugin will be effecti
 I don't know how to use C++ to write a native foobar2000 plugin, so I used C# to write a program named Foofly-proxy(`Foofly-proxy.exe`) to call the httpcontorl plugin of foobar2000.
 Now you run the program Foofly-proxy(`Foofly-proxy.exe`), and you can double click the notifyicon to open the main window. 
 
-![plugin-1](https://tracemouse.github.io/Foofly/assets/img/foo_httpcontrol.jpg)
-![plugin-2](https://tracemouse.github.io/Foofly/assets/img/foofly-proxy.jpg)
+![plugin-install-1](https://tracemouse.github.io/Foofly/assets/img/plugin-install.jpg)
 
 ### App Installation ###
 
@@ -56,17 +55,14 @@ http://ip:port/  |  Provided by your Foofly-proxy(`Foofly-proxy.exe`), only avai
 
 3) Now you can see the Foofly icon on your main screen, click it like a native app, enjoy it!
 
-![iphone-1](https://tracemouse.github.io/Foofly/docs/iphone-1.png)
-![iphone-2](https://tracemouse.github.io/Foofly/docs/iphone-2.png)
-![iphone-3](https://tracemouse.github.io/Foofly/docs/iphone-3.png)
-![iphone-4](https://tracemouse.github.io/Foofly/docs/iphone-4.png)
+![iphone-1](https://tracemouse.github.io/Foofly/assets/img/iphone-1.png)
+![iphone-2](https://tracemouse.github.io/Foofly/assets/img/iphone-2.png)
+![iphone-3](https://tracemouse.github.io/Foofly/assets/img/iphone-3.png)
+![iphone-4](https://tracemouse.github.io/Foofly/assets/img/iphone-4.png)
 
 #### Android WebApp ####
 
 Use Google Chrome to do it like iPhone Safari above, Chrome may remind you the HTTP is unsafe, please ignore it because Foofly cannot use SSL.
-
-![chrome](https://tracemouse.github.io/Foofly/docs/chrome.png)
-![chrome2](https://tracemouse.github.io/Foofly/docs/chrome-2.png)
 
 ## Usage ##
 
@@ -77,35 +73,35 @@ If you don't know how to config the settings of Foofly-proxy & httpcontrol, just
 
 The httpcontrol configration file is located at "configuration\foo_httpcontrol.dll.cfg", delete it and re-open the foobar2000 program, the httpcontorl setting will be fallback as default.
 
-
-![plugin-2](https://tracemouse.github.io/Foofly/docs/plugin-2.png)
+![plugin-1](https://tracemouse.github.io/Foofly/assets/img/foo_httpcontrol.jpg)
+![plugin-2](https://tracemouse.github.io/Foofly/assets/img/foofly-proxy.jpg)
 
 ### App Usage ###
 
 - **Now Playing List**  
 
-![tab1](https://tracemouse.github.io/Foofly/docs/tab1.png)
+![tab1](https://tracemouse.github.io/Foofly/assets/img/tab1.png)
 
 - **Now Playing Track**
 
-![playing](https://tracemouse.github.io/Foofly/docs/playing.png)
+![playing](https://tracemouse.github.io/Foofly/assets/img/playing.png)
 
 - **Music Library**  
 Suggest to create a playlist named "All tracks" to include all songs of your music library, and then set the source playlist of the music library of Foofly as "All tracks".
 
-![tab2](https://tracemouse.github.io/Foofly/docs/tab2.png)
+![tab2](https://tracemouse.github.io/Foofly/assets/img/tab2.png)
 
 - **Search**  
 
-![search](https://tracemouse.github.io/Foofly/docs/search.png)
+![search](https://tracemouse.github.io/Foofly/assets/img/search.png)
 
 - **Playlist**  
 
-![tab3](https://tracemouse.github.io/Foofly/docs/tab3.png)
+![tab3](https://tracemouse.github.io/Foofly/assets/img/tab3.png)
 
 - **Settings**
 
-![tab4](https://tracemouse.github.io/Foofly/docs/tab4.png)
+![tab4](https://tracemouse.github.io/Foofly/assets/img/tab4.png)
  
 
 ## Multiple Languages ##
@@ -144,8 +140,8 @@ If you like my project, please donate it to me.
 
 **微信**
 
-![alipay-wechat](https://tracemouse.github.io/Foofly/docs/wechat.png)
+![alipay-wechat](https://tracemouse.github.io/Foofly/assets/img/wechat.png)
 
 **支付宝**
 
-![alipay-wechat](https://tracemouse.github.io/Foofly/docs/alipay.png)
+![alipay-wechat](https://tracemouse.github.io/Foofly/assets/img/alipay.png)
