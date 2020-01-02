@@ -136,8 +136,8 @@ If you like my project, please donate it to me.
 
 **微信**
 
-![alipay-wechat](https://tracemouse.github.io/Foofly/assets/img/wechat.jpg)
+![alipay-wechat](https://tracemouse.github.io/Foofly/assets/img/wechat.png)
 
 **支付宝**
 
-![alipay-wechat](https://tracemouse.github.io/Foofly/assets/img/alipay.jpg)
+![alipay-wechat](https://tracemouse.github.io/Foofly/assets/img/alipay.png)
