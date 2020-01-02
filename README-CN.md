@@ -32,7 +32,7 @@ Foofly 分为plugin和App两部分，plugin采用C#编写，App采用ionic4 + An
 
 由于作者对C++不太熟悉，而foobar2000的原生插件必须使用C++编写，所以只好采用了比较笨的办法，就是用C#写了一个程序叫 foofly-proxy.exe，你只需要双击运行这个程序就行了，这个程序会通过foobar2000的foo_httpcontrol插件来控制foobar2000.  foofly-proxy.exe运行时是默认最小化到任务栏的，你可以通过双击任务栏的图标打开设置窗口，你可以保持foofly-proxy.exe一直开着，当手机端连接时foofly-proxy会自动打开foobar2000主程序。
 
-![plugin-1](https://tracemouse.github.io/Foobar2000Fly/docs/plugin-1.png)
+![plugin-install-1](https://tracemouse.github.io/Foofly/assets/img/plugin-install.jpg)
 
 ### App 安装方法 ###
 
@@ -61,9 +61,6 @@ http://ip:port/  |  在Foofly-proxy设置窗口可以看见这个url, 只有当F
 
 另外，Chrome可能会提醒你http是非安全连接，这个忽略就行了，不用理会，因为Foofly没有采用SSL。
 
-![chrome](https://tracemouse.github.io/Foobar2000Fly/docs/chrome.png)
-![chrome2](https://tracemouse.github.io/Foobar2000Fly/docs/chrome-2.png)
-
 
 ## 使用方法 ##
 
@@ -73,7 +70,8 @@ foo_httpcontrol的设置在foobar2000的设置面板中，建议保留默认设�
 
 Foofly-proxy的设置可以通过双击任务栏图标打开设置窗口，建议都按照默认设置就行了，需要做什么改动。
 
-![plugin-2](https://tracemouse.github.io/Foobar2000Fly/docs/plugin-2.png)
+![plugin-1](https://tracemouse.github.io/Foofly/assets/img/foo_httpcontrol.jpg)
+![plugin-2](https://tracemouse.github.io/Foofly/assets/img/foofly-proxy.jpg)
 
 如果你的电脑网卡设置的是DHCP自动获取IP地址，IP地址可能会不固定，这样会造成你使用Foofly App时可能经常需要输入新的IP地址，所以最好把网卡设置为固定IP。设置固定IP有两个方法：  
 a) 直接在网卡属性里面把IPV4的地址固定（设置之前先查看DHCP SERVER给你分配的参数，完全设置成一样的就行了)   
@@ -88,7 +86,7 @@ b) 在路由器上的DHCP设置里把你的网卡MAC address设为静态分配�
 
 - **播放**    
 
-![tab1](https://tracemouse.github.io/Foobar2000Fly/docs/tab1.png)
+![tab1](https://tracemouse.github.io/Foofly/assets/img/tab1.jpg)
 
 
 - **正在播放的歌曲**    
@@ -96,7 +94,7 @@ b) 在路由器上的DHCP设置里把你的网卡MAC address设为静态分配�
 专辑封面在歌曲播放时默认会旋转，可在设置页面关闭动画  
 `专辑封面建议全部使用正方形图片，否则拉伸后会变形，建议的分辨率是500x500`
 
-![playing](https://tracemouse.github.io/Foobar2000Fly/docs/playing.png)
+![playing](https://tracemouse.github.io/Foofly/assets/img/playing.jpg)
 
 
 - **曲库**    
@@ -104,31 +102,26 @@ b) 在路由器上的DHCP设置里把你的网卡MAC address设为静态分配�
 
 获取远程音乐库数据时是一次性把远程的所有歌曲全部获取过来，然后在本地进行排序和分类，如果你的音乐库的歌曲数量非常大，可能需要一点时间。作者的曲库中有4000多首歌曲，实测获取速度在可接受的范围。  
 
-![tab2](https://tracemouse.github.io/Foobar2000Fly/docs/tab2.png)
-
-
-- **搜索**     
-
-![search](https://tracemouse.github.io/Foobar2000Fly/docs/search.png)
+![tab2](https://tracemouse.github.io/Foofly/assets/img/tab2.jpg)
 
 
 - **播放列表**        
 
-![tab3](https://tracemouse.github.io/Foobar2000Fly/docs/tab3.png)
+![tab3](https://tracemouse.github.io/Foofly/assets/img/tab3.jpg)
 
 
 - **设置**  
 刷新间隔仅对播放页面生效，因为只有播放页面是不停的实时刷新的，默认值是1000毫秒，不建议设置的过大或者过小 
 右上角的红色按钮点击之后可以远程控制你的电脑关闭屏幕和关机，关机要小心点，特别是立即关机一旦点击你的电脑马上就会关机
 
-![tab4](https://tracemouse.github.io/Foobar2000Fly/docs/tab4.png)
+![tab4](https://tracemouse.github.io/Foofly/assets/img/tab4.jpg)
 
 
 ## 多语言支持 ##
 
 Foofly目前支持简体中文、繁体中文和英文三种语言，如果你有兴趣翻译为其他语言，请找到下面这个JSON文件，翻译之后记得发一份给我整合到下一个版本。
 
-[`assets\i18n\en.json`](https://tracemouse.github.io/Foobar2000Fly/assets/i18n/en.json)
+[`assets\i18n\en.json`](https://tracemouse.github.io/Foofly/assets/i18n/en.json)
 
 ## 已知的问题 ##
 
@@ -162,8 +155,8 @@ WebApp(PWA) 安装模式并没有采用service worker + cache storage，所以�
 
 **微信**
 
-![alipay-wechat](https://tracemouse.github.io/Foobar2000Fly/docs/wechat.png)
+![alipay-wechat](https://tracemouse.github.io/Foofly/assets/img/wechat.png)
 
 **支付宝**
 
-![alipay-wechat](https://tracemouse.github.io/Foobar2000Fly/docs/alipay.png)
+![alipay-wechat](https://tracemouse.github.io/Foofly/assets/img/alipay.png)
