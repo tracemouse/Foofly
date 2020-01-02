@@ -35,7 +35,8 @@ Please remember to close the Foobar2000 main program, the plugin will be effecti
 I don't know how to use C++ to write a native foobar2000 plugin, so I used C# to write a program named Foofly-proxy(`Foofly-proxy.exe`) to call the httpcontorl plugin of foobar2000.
 Now you run the program Foofly-proxy(`Foofly-proxy.exe`), and you can double click the notifyicon to open the main window. 
 
-![plugin-1](https://tracemouse.github.io/Foofly/docs/plugin-1.png)
+![plugin-1](https://tracemouse.github.io/Foofly/assets/img/foo_httpcontrol.jpg)
+![plugin-2](https://tracemouse.github.io/Foofly/assets/img/foofly-proxy.jpg)
 
 ### App Installation ###
 
