@@ -91,10 +91,6 @@ Suggest to create a playlist named "All tracks" to include all songs of your mus
 
 ![tab2](https://tracemouse.github.io/Foofly/assets/img/tab2.jpg)
 
-- **Search**  
-
-![search](https://tracemouse.github.io/Foofly/assets/img/search.jpg)
-
 - **Playlist**  
 
 ![tab3](https://tracemouse.github.io/Foofly/assets/img/tab3.jpg)
