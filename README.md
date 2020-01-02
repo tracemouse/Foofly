@@ -55,10 +55,10 @@ http://ip:port/  |  Provided by your Foofly-proxy(`Foofly-proxy.exe`), only avai
 
 3) Now you can see the Foofly icon on your main screen, click it like a native app, enjoy it!
 
-![iphone-1](https://tracemouse.github.io/Foofly/assets/img/iphone-1.png)
-![iphone-2](https://tracemouse.github.io/Foofly/assets/img/iphone-2.png)
-![iphone-3](https://tracemouse.github.io/Foofly/assets/img/iphone-3.png)
-![iphone-4](https://tracemouse.github.io/Foofly/assets/img/iphone-4.png)
+![iphone-1](https://tracemouse.github.io/Foofly/assets/img/iphone-1.jpg)
+![iphone-2](https://tracemouse.github.io/Foofly/assets/img/iphone-2.jpg)
+![iphone-3](https://tracemouse.github.io/Foofly/assets/img/iphone-3.jpg)
+![iphone-4](https://tracemouse.github.io/Foofly/assets/img/iphone-4.jpg)
 
 #### Android WebApp ####
 
@@ -80,28 +80,28 @@ The httpcontrol configration file is located at "configuration\foo_httpcontrol.d
 
 - **Now Playing List**  
 
-![tab1](https://tracemouse.github.io/Foofly/assets/img/tab1.png)
+![tab1](https://tracemouse.github.io/Foofly/assets/img/tab1.jpg)
 
 - **Now Playing Track**
 
-![playing](https://tracemouse.github.io/Foofly/assets/img/playing.png)
+![playing](https://tracemouse.github.io/Foofly/assets/img/playing.jpg)
 
 - **Music Library**  
 Suggest to create a playlist named "All tracks" to include all songs of your music library, and then set the source playlist of the music library of Foofly as "All tracks".
 
-![tab2](https://tracemouse.github.io/Foofly/assets/img/tab2.png)
+![tab2](https://tracemouse.github.io/Foofly/assets/img/tab2.jpg)
 
 - **Search**  
 
-![search](https://tracemouse.github.io/Foofly/assets/img/search.png)
+![search](https://tracemouse.github.io/Foofly/assets/img/search.jpg)
 
 - **Playlist**  
 
-![tab3](https://tracemouse.github.io/Foofly/assets/img/tab3.png)
+![tab3](https://tracemouse.github.io/Foofly/assets/img/tab3.jpg)
 
 - **Settings**
 
-![tab4](https://tracemouse.github.io/Foofly/assets/img/tab4.png)
+![tab4](https://tracemouse.github.io/Foofly/assets/img/tab4.jpg)
  
 
 ## Multiple Languages ##
@@ -140,8 +140,8 @@ If you like my project, please donate it to me.
 
 **微信**
 
-![alipay-wechat](https://tracemouse.github.io/Foofly/assets/img/wechat.png)
+![alipay-wechat](https://tracemouse.github.io/Foofly/assets/img/wechat.jpg)
 
 **支付宝**
 
-![alipay-wechat](https://tracemouse.github.io/Foofly/assets/img/alipay.png)
+![alipay-wechat](https://tracemouse.github.io/Foofly/assets/img/alipay.jpg)
