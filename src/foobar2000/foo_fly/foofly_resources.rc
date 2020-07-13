@@ -1,0 +1,137 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 中文(简体，中国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_CS_CONFIGVIEW DIALOGEX 0, 0, 290, 285
+STYLE DS_SETFONT | WS_CHILD
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    LTEXT           "Foofly Http Server Settings: ",IDC_LABEL_TITLE,4,4,110,9,SS_CENTERIMAGE
+    LTEXT           "IP Address:",IDC_LABEL_IP,12,28,76,9,SS_CENTERIMAGE
+    EDITTEXT        IDC_HOST_IP,93,26,171,12,ES_AUTOHSCROLL | ES_READONLY,WS_EX_CLIENTEDGE
+    LTEXT           "Port:",IDC_LABEL_PORT,13,51,58,8,SS_CENTERIMAGE
+    EDITTEXT        IDC_SERVERPORT,93,49,65,12,ES_AUTOHSCROLL
+    LTEXT           "Version : 1.0.0",IDC_STATIC_VERSION,14,261,81,9,SS_CENTERIMAGE
+    PUSHBUTTON      "Test",IDC_BUTTON_TEST,92,105,50,14
+    EDITTEXT        IDC_WWW,93,75,171,12,ES_AUTOHSCROLL | ES_READONLY,WS_EX_CLIENTEDGE
+    LTEXT           "Web Root:",IDC_LABEL_WWW,12,76,76,9,SS_CENTERIMAGE
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_CS_CONFIGVIEW, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 287
+        VERTGUIDE, 14
+        VERTGUIDE, 21
+        VERTGUIDE, 158
+        VERTGUIDE, 259
+        VERTGUIDE, 264
+        VERTGUIDE, 273
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 283
+        HORZGUIDE, 7
+        HORZGUIDE, 21
+        HORZGUIDE, 33
+        HORZGUIDE, 50
+        HORZGUIDE, 66
+        HORZGUIDE, 108
+        HORZGUIDE, 128
+        HORZGUIDE, 147
+        HORZGUIDE, 277
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// AFX_DIALOG_LAYOUT
+//
+
+IDD_CS_CONFIGVIEW AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+#endif    // 中文(简体，中国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// 英语(美国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+#endif    // 英语(美国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
