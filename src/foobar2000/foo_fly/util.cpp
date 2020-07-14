@@ -34,9 +34,9 @@
 
 using   namespace   std;
 
-bool util::isLog = true;
-//std::string util::logfilename = "./foo_mobilecontrol_log.txt";
-std::string util::logfilename = "R:/foo_mobilecontrol_log.txt";
+bool util::isLog = false;
+std::string util::logfilename = "./foo_mobilecontrol_log.txt";
+//std::string util::logfilename = "R:/foo_mobilecontrol_log.txt";
 
 string& util::replaceall(string& str, const string& old_value, const string& new_value)
 {
